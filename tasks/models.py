@@ -48,7 +48,7 @@ class Task(models.Model):
         verbose_name="Постановщик",
         related_name="tasks",
     )
-    title = models.CharField(max_length=100, unique=True, verbose_name="Наименование задачи")
+    title = models.CharField(max_length=100, verbose_name="Наименование задачи")
     description = models.TextField(verbose_name="Описание")
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="todo", verbose_name="Статус")
     completed = models.BooleanField(default=False, verbose_name="Завершено")
