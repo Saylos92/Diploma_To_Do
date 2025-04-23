@@ -13,8 +13,6 @@ services:
     build: . # собирает образ
     depends_on: # зависимость от бд
       - db
-    ports:
-      - 8000:8000
     restart: always
     volumes:
       - .:/app
